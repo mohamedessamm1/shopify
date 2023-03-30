@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shop/layout/layout_screen.dart';
 import 'package:shop/modules/login/Login.dart';
+import 'package:shop/modules/register/register.dart';
 import 'package:shop/modules/splash/on_boarding.dart';
 import 'package:shop/network/dio/dio.dart';
 import 'package:shop/shared/cache/cache.dart';
@@ -62,7 +63,7 @@ class MyApp extends StatelessWidget {
                     statusBarIconBrightness: Brightness.dark,
                     statusBarColor: Colors.white,
                   ))),
-              home: widget)),
+              home: RegisterScreen())),
     );
   }
 }

@@ -76,28 +76,29 @@ enum ShowToastState { SUCCESS, ERROR, WARNING }
 
 Color? color;
 
+
 showtoast({required text, required ShowToastState state}) {
   Fluttertoast.showToast(
       msg: text,
       toastLength: Toast.LENGTH_LONG,
       gravity: ToastGravity.BOTTOM,
       timeInSecForIosWeb: 5,
-      backgroundColor: toastcolor(state),
+      backgroundColor: Colors.blueGrey,
       textColor: Colors.white,
       fontSize: 20.0);
-}
 
-Color? toastcolor(ShowToastState state) {
-  switch (state) {
-    case ShowToastState.SUCCESS:
-      color = Colors.green;
-      break;
-    case ShowToastState.ERROR:
-      color = Colors.red;
-      break;
-    case ShowToastState.WARNING:
-      color = Colors.amberAccent;
+  Color? toastcolor(ShowToastState state) {
+    switch (state) {
+      case ShowToastState.SUCCESS:
+        color = Colors.green;
+        break;
+      case ShowToastState.ERROR:
+        color = Colors.red;
+        break;
+      case ShowToastState.WARNING:
+        color = Colors.amberAccent;
+    }
+    return color;
   }
-  return color;
 }
 //================================================================================================================
